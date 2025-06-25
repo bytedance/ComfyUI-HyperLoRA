@@ -1,4 +1,4 @@
-# <div align="center">HyperLoRA: Parameter-Efficient Adaptive Generation for Portrait Synthesis<br>CVPR 2025 (Highlight)</div>
+# <div align="center">HyperLoRA: Parameter-Efficient Adaptive Generation for Portrait Synthesis</div>
 <div align="center">
     <a href="https://lemonsky1995.github.io/" target="_blank">Mengtian Li</a><sup>*</sup>,
     <a href="https://openreview.net/profile?id=~Jinshu_Chen2" target="_blank">Jinshu Chen</a><sup>*</sup>,
@@ -98,6 +98,17 @@ The workflows depend on [ComfyUI_ADV_CLIP_emb](https://github.com/BlenderNeko/Co
 *🌟 Recommended workflow*
 
 We fixed the random seed in all workflows so that the results can be fully reproduced. All the input images required by these workflows can be found in the ```assets``` folder.
+
+### Non-ComfyUI User
+We also provide a standalone script to generate ID LoRAs, which works without ComfyUI. Please create model folders, download models, and run the following command.
+```bash
+python3 standalone/generate_loras.py \
+    --models_dir <path_to_models> \
+    --indir <path_to_input_images> \
+    --outdir <path_to_save_LoRAs> \
+   [--model {sdxl_hyper_id_lora_v1_fidelity|sdxl_hyper_id_lora_v1_edit}] \
+   [--dtype {fp16|bf16|fp32}]
+```
 
 ### Tips
 **IMPORTANT:**
